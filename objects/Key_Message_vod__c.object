@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>CLM_Rep_Visibility_Count__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Count of reps using this Key Message by way of making corresponding CLM Presentation visible</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Count of reps using this Key Message by way of making corresponding CLM Presentation visible</inlineHelpText>
+        <label>CLM Rep Visibility Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

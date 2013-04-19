@@ -1,0 +1,17 @@
+<apex:page controller="CLMVisibilityManager">
+    <apex:messages />
+    <apex:form >
+        <apex:pageBlock title="CLM Visibility Management Screen" rendered="{!NOT(HAS_ERROR)}">
+            <c:MultiselectPicklist leftLabel="Available CLM Presentations"
+                leftOptions="{!allCLMPresentations}"
+                rightLabel="Visible CLM Presentations"
+                rightOptions="{!selectedCLMPrezis}"
+                size="14"
+                width="350px"/>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Update Visibility" action="{!updateVisibility}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:outputText >{!message}</apex:outputText>
+</apex:page>
