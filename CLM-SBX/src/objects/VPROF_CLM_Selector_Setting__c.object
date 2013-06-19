@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <description>Contains CLM Selector tool custom settings</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Available_List_Title__c</fullName>
+        <defaultValue>&quot;Available CLM Presentations&quot;</defaultValue>
+        <description>Available List title that is leveraged in the Visual Force page. Having these here allows the application ability to specify different values for different profiles.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Available List title that is leveraged in the Visual Force page. Having these here allows the application ability to specify different values for different profiles.</inlineHelpText>
+        <label>Available List Title</label>
+        <required>true</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Box_Size__c</fullName>
+        <defaultValue>14</defaultValue>
+        <description>Size/height of the box used in VF page for the available and visible lists</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Size/height of the box used in VF page for the available and visible lists</inlineHelpText>
+        <label>Box Size</label>
+        <precision>10</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Box_width__c</fullName>
+        <defaultValue>&quot;350px&quot;</defaultValue>
+        <description>Width of box used in VF page for available and visible lists</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Width of box used in VF page for available and visible lists</inlineHelpText>
+        <label>Box width</label>
+        <length>10</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Default_No_CVC_Behavior__c</fullName>
+        <defaultValue>&quot;DISPLAY_ALL&quot;</defaultValue>
+        <description>Defines the default behavior that the tool should use if no Configuration objects (CVCs) have been defined for a User at any of the levels (public group/profile/user). Possible values are: DISPLAY_ALL, DISPLAY_NONE. Default is DISPLAY_ALL which will typically show users All presentations filtered by products they have access to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defines the default behavior that the tool should use if no Configuration objects (CVCs) have been defined for a User at any of the levels (public group/profile/user). Possible values are: DISPLAY_ALL, DISPLAY_NONE. Default is DISPLAY_ALL</inlineHelpText>
+        <label>Default &quot;No CVC&quot; Behavior</label>
+        <length>20</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enable_Key_Message_Download_Handling__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>If true, the selector will attempt to record key messages which the user has no need to download due to the choices he makes in the tool. This works in conjunction with a VMOC</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If true, the selector will attempt to record key messages which the user has no need to download due to the choices he makes in the tool. This works in conjunction with a VMOC</inlineHelpText>
+        <label>Enable Key Message Download Handling</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Page_Title__c</fullName>
+        <defaultValue>&quot;CLM Visibility Management Screen&quot;</defaultValue>
+        <description>CLM Selector tool page title text used in VF page. Can be different for different profiles/users</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CLM Selector tool page title text used in VF page. Can be different for different profiles/users</inlineHelpText>
+        <label>Page Title</label>
+        <required>true</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Update_Button_Text__c</fullName>
+        <defaultValue>&quot;Update Visibility&quot;</defaultValue>
+        <description>Update Button Text used in VF page</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Update Button Text used in VF page</inlineHelpText>
+        <label>Update Button Text</label>
+        <length>60</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Visible_List_Title__c</fullName>
+        <defaultValue>&quot;Visible CLM Presentations&quot;</defaultValue>
+        <description>Title for the Visible list</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Title for the Visible list</inlineHelpText>
+        <label>Visible List Title</label>
+        <required>true</required>
+        <type>TextArea</type>
+    </fields>
+    <label>Veeva CLM Selector Setting</label>
+</CustomObject>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Holds the CLM Visibility configuration for User, Profile or Public Group</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Only Active CVCs are used to build criteria for Available lists. Please note that all validations relating to uniqueness still apply even for inactive records. So you may still not have two CVCs for the same Entity in active and inactive state. This is just convenience to turn on/off for a certain entity something.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Only Active CVCs are used to build criteria for Available lists</inlineHelpText>
+        <label>Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Available_CLM_Presentations_1__c</fullName>
+        <defaultValue>&quot;;&quot;</defaultValue>
+        <description>First list of Available CLM Presentation Names. Each name should be ; (semi-colon) seperated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>First list of Available CLM Presentation Names. Each name should be ; (semi-colon) seperated.</inlineHelpText>
+        <label>Available CLM Presentations (List 1)</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Available_CLM_Presentations_2__c</fullName>
+        <defaultValue>&quot;;&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Available CLM Presentations (List 2)</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Custom_Criteria__c</fullName>
+        <description>Where clause used to pick the matching CLM Presentations. For eg: CLM_Group_Share__c includes (&apos;;300-XXX-RX;&apos;, &apos;;300-XXX-RS;&apos; ) AND Country_code__c = &apos;US&apos;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Where clause used to pick the matching CLM Presentations. For eg: CLM_Group_Share__c includes (&apos;;300-XXX-RX;&apos;, &apos;;300-XXX-RS;&apos; ) AND Country_code__c = &apos;US&apos;</inlineHelpText>
+        <label>Custom Criteria (SOQL where clause)</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Entity_ID__c</fullName>
+        <description>Auto-populated to 18 character SFDC ID of the Entity name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Auto-populated to 18 character SFDC ID of the Entity name</inlineHelpText>
+        <label>Entity ID</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Entity_Name__c</fullName>
+        <description>Entity name can be either a username (john@force.com), Profile Name or a Public Group Name.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Entity name can be either a username (john@force.com), Profile Name or a Public Group Name.</inlineHelpText>
+        <label>Entity Name</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Entity_Type__c</fullName>
+        <description>Specifies Entity type - each entity may only have one record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies Entity type - each entity may only have one record</inlineHelpText>
+        <label>Entity Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Public Group</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Profile</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Exclusive_criteria__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If checked, then this condition is &quot;AND&quot;ed with other CVCs that may exist for the logged in User. Only works with Custom Criteria, i.e., &quot;Use Custom Criteria&quot;. is checked/true</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, then this condition is &quot;AND&quot;ed with other CVCs that may exist for the logged in User. Only works with Custom Criteria, i.e., &quot;Use Custom Criteria&quot;. is checked/true</inlineHelpText>
+        <label>Exclusive criteria?</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Entity Id</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Entity Id</inlineHelpText>
+        <label>External Id</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Use_Custom_Criteria__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If checked, the SOQL Where clause in the Custom Criteria field is used instead of the Available CLM Presentations Lists 1 &amp; 2. Please note if you check this box, Available CLM Presentations Lists 1 &amp; 2 will be ignored.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, the SOQL Where clause in the Custom Criteria field is used instead of the Available CLM Presentations Lists 1 &amp; 2. Please note if you check this box, Available CLM Presentations Lists 1 &amp; 2 will be ignored.</inlineHelpText>
+        <label>Use Custom Criteria</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>CLM Visibility Configuration</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Entity_Type__c</columns>
+        <columns>Use_Custom_Criteria__c</columns>
+        <columns>Custom_Criteria__c</columns>
+        <columns>Entity_ID__c</columns>
+        <columns>External_Id__c</columns>
+        <columns>Exclusive_criteria__c</columns>
+        <columns>Available_CLM_Presentations_1__c</columns>
+        <columns>Available_CLM_Presentations_2__c</columns>
+        <columns>Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Entity Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>CLM Visibility Configurations</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Read</sharingModel>
+    <validationRules>
+        <fullName>Custom_Criteria_Must_If_Use_Custom_Crit</fullName>
+        <active>true</active>
+        <description>Must specify non-empty Custom Criteria if &quot;Use Custom Criteria&quot; is checked</description>
+        <errorConditionFormula>AND(Use_Custom_Criteria__c, ISBLANK( Custom_Criteria__c ) )</errorConditionFormula>
+        <errorDisplayField>Custom_Criteria__c</errorDisplayField>
+        <errorMessage>Must specify non-empty Custom Criteria if &quot;Use Custom Criteria&quot; is checked. The Custom Criteria must be a valid condition that can be fed into a SOQL where clause</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Exclusive_Allowed_Only_For_User_Type</fullName>
+        <active>true</active>
+        <description>If the Entity type is user, only then can you check Exclusive Criteria flag as you may only provide overrides at User level</description>
+        <errorConditionFormula>AND (
+ NOT(ISPICKVAL(Entity_Type__c,&apos;User&apos;)) ,
+ Exclusive_criteria__c )</errorConditionFormula>
+        <errorMessage>Custom criteria can be made exclusive only if the Entity Type is User</errorMessage>
+    </validationRules>
+</CustomObject>

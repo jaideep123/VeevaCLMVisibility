@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>CLMVisibilityManager</members>
+        <members>CLMVisibilityManagerUtil</members>
+        <members>MultiselectController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>MultiselectPicklist</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>CLMVisibilityManager</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>CLMVisibilityConfiguration</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>CLM_Visibility_Configuration__c</members>
+        <members>CLM_Visibility_Manager_Transaction__c</members>
+        <members>Invisible_CLM_Key_Message__c</members>
+        <members>VPROF_CLM_Selector_Setting__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>CLM_Visibility_Configuration__c</members>
+        <members>CLM_Visibility_Manager</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>CLM_Selector_Documentation</members>
+        <members>CLM_Selector_Documentation/CLM_Selector_Janssen_Training_Module.pptx</members>
+        <name>Document</name>
+    </types>
+    <types>
+        <members>CLM_Visibility_Configuration__c-CLM Visibility Configuration Layout</members>
+        <members>CLM_Visibility_Manager_Transaction__c-CLM Visibility Tracker Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Clm_Presentation_vod__c.VCVM_Manual_User_Selection__c</members>
+        <name>SharingReason</name>
+    </types>
+    <version>27.0</version>
+</Package>

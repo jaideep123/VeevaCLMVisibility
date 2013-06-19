@@ -1,0 +1,17 @@
+<apex:page controller="CLMVisibilityManager">
+    <apex:messages />
+    <apex:form >
+        <apex:pageBlock title="{!$Setup.VPROF_CLM_Selector_Setting__c.Page_Title__c}" rendered="{!NOT(HAS_ERROR)}">
+            <c:MultiselectPicklist leftLabel="{!$Setup.VPROF_CLM_Selector_Setting__c.Available_List_Title__c}"
+                leftOptions="{!allCLMPresentations}"
+                rightLabel="{!$Setup.VPROF_CLM_Selector_Setting__c.Visible_List_Title__c}"
+                rightOptions="{!selectedCLMPrezis}"
+                size="{!$Setup.VPROF_CLM_Selector_Setting__c.Box_Size__c}"
+                width="{!$Setup.VPROF_CLM_Selector_Setting__c.Box_width__c}"/>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="{!$Setup.VPROF_CLM_Selector_Setting__c.Update_Button_Text__c}" action="{!updateVisibility}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:outputText >{!message}</apex:outputText>
+</apex:page>

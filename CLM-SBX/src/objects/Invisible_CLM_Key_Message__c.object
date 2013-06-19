@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Records in this table correspond to CLM Key messages that are not visible to a User. The external Id for this record is OwnerId + &apos;__&apos; + Key_Message__c</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>OwnerId + __ + Key_Message__c</description>
+        <externalId>true</externalId>
+        <inlineHelpText>OwnerId + __ + Key_Message__c</inlineHelpText>
+        <label>External Id</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Key_Message__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Key Message which should be invisible to the Owner of this record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Key Message which should be invisible to the Owner of this record</inlineHelpText>
+        <label>Key Message</label>
+        <referenceTo>Key_Message_vod__c</referenceTo>
+        <relationshipLabel>Invisible CLM Key Messages</relationshipLabel>
+        <relationshipName>Invisible_CLM_Key_Messages</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <label>Invisible CLM Key Message</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Key_Message__c</columns>
+        <columns>External_Id__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>K-{0000}</displayFormat>
+        <label>Invisible CLM Key Message Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Invisible CLM Key Messages</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>
